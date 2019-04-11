@@ -1,3 +1,57 @@
+.generate-container{
+  padding-top: 5rem;
+  margin : auto;
+  height: 50vh;
+  text-align: center;
+  width : 90%;
+  display: flex;
+}
+
+.generate-container .left{
+  width: 50%;
+  height: 90%;
+  padding-top: 7rem;
+  background-color: rgba(199, 195, 195, 0.247);
+  font-size: 1.3rem;
+}
+
+.generate-container .right{
+  width: 50%;
+  height: 90%;
+  background-color: rgb(36, 36, 36);
+  font-size: .8rem;
+}
+
+.generate-container .right .generate-info{
+  opacity: 0;
+  color: #fff;
+}
+
+.generate-container .right .generate-info .pa, .generate-container .right .generate-info .pk{
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+
 .result-container, .address-container{
   display: none;
+}
+
+.address-container{
+  padding-top: 7rem;
+  height: 50vh;
+  text-align: center;
+  width : 100%;
+}
+
+.address-container .search-pa{
+  width: 350px;
+}
+
+.address-container .msg{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.address-container hr{
+  width: 700px;
 }
