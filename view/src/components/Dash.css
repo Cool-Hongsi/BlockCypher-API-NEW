@@ -13,3 +13,58 @@
     font-size: 2rem;
     color : #fff;
 }
+
+/* media query */
+@media screen and (min-width: 2175px){
+    .dash-container .dash-content{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2175px){
+    .dash-container .dash-content{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width:1124px) and (max-width:1600px){
+    .dash-container .dash-content{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1124px){
+    .dash-container .dash-content{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:767px){
+    .dash-container .dash-content{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:574px){
+    .dash-container .dash-content{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:424px){
+    .dash-container .dash-content{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:374px){
+    .dash-container .dash-content{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .dash-container .dash-content{
+        font-size: 1.2rem;
+    }
+}

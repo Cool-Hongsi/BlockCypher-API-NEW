@@ -4,9 +4,9 @@ import Dash from './components/Dash'; // Import another component
 
 import { Route, Switch, withRouter } from 'react-router-dom'; // Router Library
 import { TweenMax } from 'gsap'; // Desgin Library
+import { Button, Container, Row, Col } from 'reactstrap';
 import axios from 'axios'; // Transfer Library
 
-import { Button } from 'reactstrap';
 import './App.css';
 
 class App extends React.Component{
@@ -56,7 +56,7 @@ class App extends React.Component{
     });
 
     TweenMax.to(".generate-info", 2, { // Show the tag which has the classname (generate-info)
-      y : 42,
+      y : 30,
       opacity : .8
     })
   };
@@ -89,11 +89,11 @@ class App extends React.Component{
             if(this.state.data.txs[0].hash){ // At least one transaction
               this.props.history.push('/address'); // Change URL in order to show another component
 
-              TweenMax.to('.result-container', 2, { // Show the tag which has the classname (result-container)
-                display: 'block',
-                y: 70,
-                opacity: .8
-              });
+              // TweenMax.to('.result-container', 2, { // Show the tag which has the classname (result-container)
+              //   display: 'block',
+              //   y: 50,
+              //   opacity: .8
+              // });
             }
             else{
               // Nothing To Do
@@ -118,26 +118,35 @@ class App extends React.Component{
         <Dash />
 
         <div className="generate-container">
-          <div className="left">
-            <Button color="secondary" onClick={this.generateWallet}>Generate Wallet</Button><br/><br/>
-            {/* <button onClick={this.noGenerateWallet}>No</button> */}
-          </div>
-          <div className="right">
-            <div className="generate-info">
-              <div className="pa">Public Address</div>
-              {this.state.generateData.address}<br/><br/>
-              <div className="pk">Private Key</div>
-              {this.state.generateData.pk}<br/><br/>
-              {this.state.getCoin ? <a href="https://tbtc.bitaps.com" target="_blank" onClick={this.showAddress} rel="noopener noreferrer"><Button color="info">Get Coin</Button></a> : null}
-            </div> 
-          </div>
+          <Container>
+            <Row>
+              <Col xs="12" sm="12" md="12" lg="6" xl="6">
+                <div className="left">
+                  <Button className="gw-btn" color="secondary" onClick={this.generateWallet}>Generate Wallet</Button><br/><br/>
+                  {/* <button onClick={this.noGenerateWallet}>No</button> */}
+                </div>
+              </Col>
+              <Col xs="12" sm="12" md="12" lg="6" xl="6">
+                <div className="right">
+                  <div className="generate-info">
+                    <div className="pa">Public Address</div>
+                    <input type="text" className="gc-input-pa" value={this.state.generateData.address} /><br/><br/>
+                    <div className="pk">Private Key</div>
+                    <input type="text" className="gc-input-pa" value={this.state.generateData.pk} /><br/><br/>
+                    {this.state.getCoin ? <a href="https://tbtc.bitaps.com" target="_blank" onClick={this.showAddress} rel="noopener noreferrer"><Button className="gc-btn" color="info">Get Coin</Button></a> : null}
+                  </div> 
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
 
         <div className="address-container">
           <input className="search-pa" type="text" onChange={this.setData} placeholder="Public Address" required /><br /><br />
-          <Button color="primary" onClick={() => this.getData(this.state.address)}>Balance</Button>
+          <Button className="search-btn" color="primary" onClick={() => this.getData(this.state.address)}>Balance</Button>
           <hr />
-          <div className="msg">Click Balance button after testnet bitcoin receives in your wallet</div>
+          <div className="msg">Click Balance button after your wallet receives testnet bitcoin</div><br/>
+          <a className="check-here" href="https://live.blockcypher.com/" target="_blank" rel="noopener noreferrer">Check Here</a>
         </div>
 
         <div className="result-container">
@@ -149,8 +158,8 @@ class App extends React.Component{
           </Switch>
         </div>
       </div>
-        )
-    }
+      )
+  }
 }
 
 export default withRouter(App);

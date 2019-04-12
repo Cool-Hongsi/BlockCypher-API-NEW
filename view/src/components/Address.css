@@ -1,0 +1,479 @@
+.address-info-container{
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    display: table;
+    background-color: rgb(240, 240, 240);
+    opacity: .9;
+    margin-bottom: 100px;
+}
+
+.address-info{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.address-info-section{
+    display: flex;
+}
+
+.address-info-container .address-info .left{
+    width: 100%;
+    padding-top: 40px;
+}
+
+.address-info-container .address-info .right{
+    width: 100%;
+}
+
+.hex-container{
+    height: 20vh;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+/* media query */
+@media screen and (min-width: 2175px){
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 4rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        width: 330px;
+        height: 50px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 2rem;
+        width: 200px;
+    }
+    
+    .hex-container{      
+        padding-top: 3rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .hex-container .send-hashcode-btn{
+        font-size: 2rem;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2175px){
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 4rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        width: 330px;
+        height: 50px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 2rem;
+        width: 200px;
+    }
+    
+    .hex-container{      
+        padding-top: 3rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .hex-container .send-hashcode-btn{
+        font-size: 2rem;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1124px) and (max-width:1600px){
+    .address-info-container{
+        margin-top: 100px;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 50px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 1.5rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 3rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        width: 330px;
+        height: 40px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1.5rem;
+        width: 130px;
+    }
+    
+    .hex-container{      
+        padding-top: 3rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .hex-container .send-hashcode-btn{
+        font-size: 1.6rem;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1124px){
+    .address-info-container{
+        margin-top: 100px;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 30px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 1.1rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        width: 260px;
+        height: 30px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        padding-top: 3rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .hex-container .send-hashcode-btn{
+        font-size: 1.4rem;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 1.1rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 10px;
+        width: 260px;
+        height: 30px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        padding-top: 2rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:767px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 1.1rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 10px;
+        width: 260px;
+        height: 30px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        padding-top: 2rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:574px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: 1.1rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 2rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 10px;
+        width: 260px;
+        height: 30px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        padding-top: 2rem;  
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:424px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: .8rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 5px;
+        width: 200px;
+        height: 25px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:374px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: .8rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 5px;
+        width: 200px;
+        height: 25px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{       
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .address-info-container{
+        margin-top: 70px;
+        height: 50vh;
+    }
+
+    .address-info-container .address-info .left{
+        padding-top: 0px;
+    }
+
+    .address-info-container .address-info .left .balance-address{
+        font-size: .8rem;
+    }
+
+    .address-info-container .address-info .left .balance-value{
+        color: red;
+        font-size: 1.5rem;
+    }
+
+    .address-info-container .address-info .right .pay-to-address, .address-info-container .address-info .right .pay-to-amount{
+        margin-top: 5px;
+        width: 200px;
+        height: 25px;
+    }
+
+    .address-info-container .address-info .right .pay-to-btn{
+        font-size: 1rem;
+        width: 100px;
+    }
+    
+    .hex-container{      
+        height: 20vh;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hex-container .hex-container-title{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}

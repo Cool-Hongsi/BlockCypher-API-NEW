@@ -1,0 +1,230 @@
+.db-container{
+    margin-top: 120px;
+    text-align: center;
+    width: auto;
+}
+
+.db-table-container{
+    opacity: 0;
+}
+
+/* media query */
+@media screen and (min-width: 2175px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 300px;
+        font-size: 2rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 2175px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 300px;
+        font-size: 2rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1124px) and (max-width:1600px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1124px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:575px) and (max-width:767px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .db-table-container{
+        width: 80%;
+        margin: auto;
+        font-size: 7px;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width:574px){
+    .db-container{
+        margin-top: 200px;
+    }
+
+    .db-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .db-table-container{
+        width: 100%;
+        margin: auto;
+        font-size: 6px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:424px){
+    .db-container{
+        margin-top: 200px;
+        width: auto;
+    }
+
+    .db-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .db-table-container .db-table{
+        width: 80%;
+        font-size: 5px;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:374px){
+    .db-container{
+        margin-top: 200px;
+        width: auto;
+    }
+
+    .db-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .db-table-container .db-table{
+        width: 80%;
+        font-size: 5px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .db-container{
+        margin-top: 200px;
+        width: auto;
+    }
+
+    .db-container-title{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .db-container .db-add-txs, .db-container .db-show-txs{
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    .db-table-container .db-table{
+        width: 80%;
+        font-size: 5px;
+    }
+}

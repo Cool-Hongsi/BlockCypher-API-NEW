@@ -14,6 +14,7 @@ const pool = mysql.createPool({
     database: 'heroku_972eca15864c790'
 });
 
+/* When I create the record table, I set the hashcode as Primary Key to prevent duplicating */
 module.exports.insertData = (txs) => {
     return new Promise((resolve, reject) => { // Asynchronous (resolve -> then) (reject -> catch)
         var sql = 'INSERT INTO record (HASHCODE) VALUES(?)'; // Just only receive HASHCODE value from BlockCypher API

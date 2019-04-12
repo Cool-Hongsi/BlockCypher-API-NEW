@@ -33,6 +33,6 @@
         <li>Type another virtual wallet public address that the user would like to transfer bitcoin and amount</li>
         <li>The user is able to find out hex code and put the hex code into https://live.blockcypher.com/btc-testnet/pushtx</li>
         <li>Once the transaction is completed, the additional transaction record in virtual wallet will be added.</li>
-        <li>As long as the user clicks 'Add Transaction', the record of transaction (Particularly, hash code) will be stored in MySQ</li>
-        <li>As long as the user clicks 'Show Transaction', the record of transaction (All records) will be indicated on page</li>
+        <li>Once the user clicks 'Add Transaction', the record of transaction (Particularly, hash code) will be stored in MySQL</li>
+        <li>Once the user clicks 'Show Transaction', the record of transaction (All records) will be indicated on page</li>
     </ol>

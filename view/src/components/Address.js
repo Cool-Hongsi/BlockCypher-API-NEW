@@ -1,5 +1,10 @@
 import React from 'react';
+import Database from './Database';
+
 import axios from 'axios';
+import { Button, Container, Row, Col } from 'reactstrap';
+
+import './Address.css';
 
 export default class Address extends React.Component{
 
@@ -7,24 +12,23 @@ export default class Address extends React.Component{
         super(props);
 
         this.state = {
-            form : {
+            form : { // In order to receive and store the data from user whenever the user inputs something inside of input tag.
                 payToAddress : '',
                 payToAmount : ''
             },
             hexValue : '',
             showLink : false,
-            row : []
+            showdb : false
         }
 
         this.setData = this.setData.bind(this);
         this.sendData = this.sendData.bind(this);
-        this.addDatabase = this.addDatabase.bind(this);
-        this.showDatabase = this.showDatabase.bind(this);
+        this.showDB = this.showDB.bind(this);
     }
 
     setData(e){ // Whenever I typed something in input tag, the data will be stored in address state depending on name property
-        var name = e.target.name;
-        var value = e.target.value;
+        var name = e.target.name; // Each input name property
+        var value = e.target.value; // Each input value property
 
         this.setState({
             form :{
@@ -66,56 +70,50 @@ export default class Address extends React.Component{
         })
     };
 
-    addDatabase(paramAddr){
-        axios.post('/api/addDatabase', {addr : paramAddr});
-    };
-
-    showDatabase(){
-        axios.get('/api/showDatabase').then((rows) => {
-            this.setState({
-                row : rows.data // Definitely put .data likewise above
-            });
-        }).catch((err) => {
-            console.log(err);
+    showDB(){
+        this.setState({
+            showdb : !this.state.showdb
         })
-    };
+    }
     
     render(){
         return(
-            <div>            
-                <h3>Address : {this.props.address}</h3>
-                <h3>Private Key : {this.props.pk}</h3>
-                <h3>Balance : {parseFloat(this.props.balance) / 100000000} BTC</h3><hr/>
-                <h3>Hash : {this.props.hash}</h3>
+            <div>
+                <div className="address-info-container">
+                    <div className="address-info">
+                        <div className="address-info-section">
+                            <Container>
+                                <Row>
+                                    <Col xs="12" sm="12" md="12" lg="6" xl="6">
+                                        <div className="left">
+                                            <div className="balance-address">{this.props.address}</div>
+                                            {/* <div>Private Key : {this.props.pk}</div> */}
+                                            <div className="balance-value">{parseFloat(this.props.balance) / 100000000} BTC</div>
+                                            {/* <h3>Hash : {this.props.hash}</h3> */}
+                                        </div>
+                                    </Col>
+                                    <Col xs="12" sm="12" md="12" lg="6" xl="6">
+                                        <div className="right">
+                                            <input className="pay-to-address" type="text" name="payToAddress" onChange={this.setData} placeholder="Pay To Address" required /><br/><br/>
+                                            <input className="pay-to-amount" type="text" name="payToAmount" onChange={this.setData} placeholder="Amount" required /><br/><br/>
+                                            <Button className="pay-to-btn" color="danger" onClick={this.sendData}>Payment</Button>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                    </div>
+                </div>      
                 <br/>
-                
-                <input type="text" name="payToAddress" onChange={this.setData} placeholder="Pay To" required /><br/>
-                <input type="text" name="payToAmount" onChange={this.setData} placeholder="Amount" required /><br/>
-                <button onClick={this.sendData}>Payment</button>
 
-                <hr/>
-                <h2>Hex : {this.state.hexValue}</h2>
-                {this.state.showLink ? <a href="https://live.blockcypher.com/btc-testnet/pushtx/" target="_blank" onClick={this.showAddress} rel="noopener noreferrer"><button>Send Hex Code</button></a> : null}<br/><br/>
-                <button onClick={() => this.addDatabase(this.props.address)}>Add Transaction</button>
-                <button onClick={this.showDatabase}>Show Transaction</button>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>HASH</th>
-                            <th>REGISTRATION</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.row.map((el) => {
-                            return(
-                                <tr>
-                                    <td>{el.HASHCODE}</td>
-                                    <td>{el.REGISTRATION}</td>
-                                </tr>
-                            )
-                        })}
-                    </tbody>
-                </table>
+                <div className="hex-container">
+                    <div className="hex-container-title">Hash Code</div>
+                    <input className="hex-container-input" type="text" style={{width:"100%", height:"40px"}} value={this.state.hexValue} /><br/><br/>
+                    {this.state.showLink ? <a href="https://live.blockcypher.com/btc-testnet/pushtx/" target="_blank" onClick={this.showDB} rel="noopener noreferrer"><Button className="send-hashcode-btn" color="primary">Send Hash Code</Button></a> : null}<br/><br/>
+                </div>
+                
+                {this.state.showdb ? <Database address={this.props.address} /> : null}
+                {/* The value of this.state.showdb is true -> show the Database component, otherwise, ignore (null) */}
             </div>
         )
     }
