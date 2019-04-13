@@ -56,7 +56,8 @@ export default class Database extends React.Component{
                                 </tr>
                             </thead>
                             <tbody>
-                                {this.state.row.map((el, index) => { {/* By using map method, I'm able to have an access to each index */}
+                            {/* By using map method, I'm able to have an access to each index */}
+                                {this.state.row.map((el, index) => {
                                     return(
                                         <tr>
                                             <td>{index}</td>
