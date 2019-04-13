@@ -5,6 +5,7 @@
     <li>Clone https://github.com/Cool-Hongsi/BlockCypher-API.git</li>
     <li>./BlockCypher-API -> npm install (To install necessary backend modules)</li>
     <li>./BlockCypher-API/view -> npm install (To install necessary frontend modules)</li>
+    <li>./BlockCypher-API -> npm run dev (To execute the program)</li>
 </ul>
 <h2>SET UP</h2>
 <ul>
