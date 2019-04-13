@@ -2,7 +2,7 @@
   "name": "view",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Cool-Hongsi.github.io/blockcypher",
+  "homepage": "https://Cool-Hongsi.github.io/BlockCypher-API",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
