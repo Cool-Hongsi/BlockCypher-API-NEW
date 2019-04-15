@@ -19,7 +19,7 @@ module.exports.insertData = (txs) => {
     return new Promise((resolve, reject) => { // Asynchronous (resolve -> then) (reject -> catch)
         var sql = 'INSERT INTO record (HASHCODE, FROMPUBADD, TOPUBADD, AMOUNT, FEE) VALUES(?, ?, ?, ?, ?)';
 
-        if(txs.inputs[0].witness){
+        if(txs.inputs[0].witness){ // First transaction with testnet bitcoin faucet
             var params = [txs.hash, "Bitcoin Testnet Faucet", txs.outputs[0].addresses[0], txs.total, txs.fees];
         }
         else{
