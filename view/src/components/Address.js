@@ -63,7 +63,7 @@ export default class Address extends React.Component{
             payToAddress : this.state.form.payToAddress, hash : this.props.hash, pk : this.props.pk}).then((result) => {
                 this.setState({
                     hexValue : result.data, // Definitely should put .data because the response value is object : { data : {} ~~ 
-                    showLink : !this.state.showLink
+                    showLink : true
                 })
             }).catch((err) => {
                 console.log(err);
@@ -72,7 +72,7 @@ export default class Address extends React.Component{
 
     showDB(){
         this.setState({
-            showdb : !this.state.showdb
+            showdb : true
         })
     }
     

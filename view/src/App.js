@@ -153,7 +153,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path="/address" render={() => (
               <Address address={this.state.data.address} balance={this.state.data.final_balance} 
-                pk={this.state.generateData.pk} hash={this.state.data.txs[0].hash} />
+                pk={this.state.generateData.pk} hash={this.state.data.txs} />
             )}/>
           </Switch>
         </div>

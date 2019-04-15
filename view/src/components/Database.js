@@ -51,7 +51,11 @@ export default class Database extends React.Component{
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>HASH</th>
+                                    <th>HASHCODE</th>
+                                    <th>FROM</th>
+                                    <th>TO</th>
+                                    <th>AMOUNT</th>
+                                    <th>FEE</th>
                                     <th>REGISTRATION</th>
                                 </tr>
                             </thead>
@@ -62,7 +66,11 @@ export default class Database extends React.Component{
                                         <tr>
                                             <td>{index}</td>
                                             <td>{el.HASHCODE}</td>
-                                            <td>{el.REGISTRATION}</td>
+                                            <td>{el.FROMPUBADD}</td>
+                                            <td>{el.TOPUBADD}</td>
+                                            <td>{el.AMOUNT}</td>
+                                            <td>{el.FEE}</td>
+                                            <td>{el.RESGISTRATION}</td>
                                         </tr>
                                     )
                                 })}

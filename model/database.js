@@ -8,17 +8,24 @@ const mysql = require('mysql');
 
 // Create MySQL Database via HEROKU (ClearDB)
 const pool = mysql.createPool({
-    host: 'us-cdbr-iron-east-03.cleardb.net',
-    user: 'b51b7ab0cc7507',
-    password: '2469535e',
-    database: 'heroku_972eca15864c790'
+    host: 'us-cdbr-iron-east-02.cleardb.net',
+    user: 'b2a3e1f06f6fc1',
+    password: 'ff8d8faf',
+    database: 'heroku_d4b72c20aba5285'
 });
 
 /* When I create the record table, I set the hashcode as Primary Key to prevent duplicating */
 module.exports.insertData = (txs) => {
     return new Promise((resolve, reject) => { // Asynchronous (resolve -> then) (reject -> catch)
-        var sql = 'INSERT INTO record (HASHCODE) VALUES(?)'; // Just only receive HASHCODE value from BlockCypher API
-        var params = txs.hash;
+        var sql = 'INSERT INTO record (HASHCODE, FROMPUBADD, TOPUBADD, AMOUNT, FEE) VALUES(?, ?, ?, ?, ?)';
+
+        if(txs.inputs[0].witness){
+            var params = [txs.hash, "Bitcoin Testnet Faucet", txs.outputs[0].addresses[0], txs.total, txs.fees];
+        }
+        else{
+            var params = [txs.hash, txs.inputs[0].addresses[0], txs.outputs[0].addresses[0], txs.total, txs.fees];
+        }
+        
         pool.query(sql, params, function(err, rows, fields){
             if(err){
                 reject(err);

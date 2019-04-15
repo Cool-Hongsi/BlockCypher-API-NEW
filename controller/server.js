@@ -2,7 +2,7 @@
 
 Title : BlockCypher API
 Name : Sungjun Hong
-Created : April 12, 2019
+Created : 
 
 *********************************************************************** */
 
@@ -39,7 +39,10 @@ app.get('/api/generateWallet', (req, res) => {
 app.post('/api/payment', (req, res) => {
 
     let txb = new bitcoin.TransactionBuilder(testnet);
-    let txid = req.body.hash; // hash (transaction ID)
+    let txid = req.body.hash[req.body.hash.length - 1].hash; 
+    // After clicking the balance button, click payment button.
+    // A Bitcoin transaction typically references previous transaction outputs as new transaction inputs.
+    
     let outn = 0; // n value
     
     // input
