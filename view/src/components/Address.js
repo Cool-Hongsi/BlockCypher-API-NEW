@@ -108,7 +108,7 @@ export default class Address extends React.Component{
 
                 <div className="hex-container">
                     <div className="hex-container-title">Hash Code</div>
-                    <input className="hex-container-input" type="text" style={{width:"100%", height:"40px"}} value={this.state.hexValue} /><br/><br/>
+                    <input className="hex-container-input" type="text" style={{width:"100%", height:"40px"}} value={this.state.hexValue} readOnly /><br/><br/>
                     {this.state.showLink ? <a href="https://live.blockcypher.com/btc-testnet/pushtx/" target="_blank" onClick={this.showDB} rel="noopener noreferrer"><Button className="send-hashcode-btn" color="primary">Send Hash Code</Button></a> : null}<br/><br/>
                 </div>
                 

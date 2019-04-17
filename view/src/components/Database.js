@@ -12,7 +12,6 @@ export default class Database extends React.Component{
         super(props);
 
         this.state = {
-            addr : this.props.address,
             row : []
         }
 
@@ -43,7 +42,7 @@ export default class Database extends React.Component{
             <div>
                 <div className="db-container">
                     <div className="db-container-title">Database</div><br/><br/>
-                    <Button className="db-add-txs" color="primary" onClick={() => this.addDatabase(this.state.addr)}>Add Transaction</Button><br/><br/>
+                    <Button className="db-add-txs" color="primary" onClick={() => this.addDatabase(this.props.address)}>Add Transaction</Button><br/><br/>
                     <Button className="db-show-txs" color="danger" onClick={this.showDatabase}>Show Transaction</Button><br/><br/><br/><br/>
                     <div className="db-table-container">
                     {/* table contents will be indicated after the user click the show transaction button (will receive the data from database) */}
@@ -63,7 +62,7 @@ export default class Database extends React.Component{
                             {/* By using map method, I'm able to have an access to each index */}
                                 {this.state.row.map((el, index) => {
                                     return(
-                                        <tr>
+                                        <tr key={el.HASHCODE}>
                                             <td>{index}</td>
                                             <td>{el.HASHCODE}</td>
                                             <td>{el.FROMPUBADD}</td>

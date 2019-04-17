@@ -45,6 +45,8 @@ app.post('/api/payment', (req, res) => {
     
     let outn = 0; // n value
     
+    console.log(txid);
+    
     // input
     txb.addInput(txid, outn);
     

@@ -130,9 +130,9 @@ class App extends React.Component{
                 <div className="right">
                   <div className="generate-info">
                     <div className="pa">Public Address</div>
-                    <input type="text" className="gc-input-pa" value={this.state.generateData.address} /><br/><br/>
+                    <input type="text" className="gc-input-pa" value={this.state.generateData.address || ''} readOnly /><br/><br/>
                     <div className="pk">Private Key</div>
-                    <input type="text" className="gc-input-pa" value={this.state.generateData.pk} /><br/><br/>
+                    <input type="text" className="gc-input-pa" value={this.state.generateData.pk || ''} readOnly /><br/><br/>
                     {this.state.getCoin ? <a href="https://tbtc.bitaps.com" target="_blank" onClick={this.showAddress} rel="noopener noreferrer"><Button className="gc-btn" color="info">Get Coin</Button></a> : null}
                   </div> 
                 </div>
